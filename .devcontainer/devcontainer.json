@@ -1,0 +1,33 @@
+// Config options: https://containers.dev/implementors/json_reference/
+{
+	"name": "webR Development Environment (WASM)",
+    // Fetches the appropriate pre-built container image from:
+    // https://github.com/r-wasm/webr/pkgs/container/webr
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update VARIANT to pick a specific webR version:
+        // "main" (default, current commit on main), 
+        // "latest" (most current release), or
+        // "v0.y.z" (release tag)
+		"args": { "VARIANT": "main" }
+	},
+	// "image": "ghcr.io/r-wasm/webr:main", // avoid hard coding
+	"customizations": {
+		"codespaces": {
+			"openFiles": []
+		},
+		"vscode": {
+			// VS Code IDs of extensions that should be installed for the container
+			"extensions": [
+				// Add VS Code WASM 
+				"dtsvet.vscode-wasm",
+				// Add ESLint extension 
+				"dbaeumer.vscode-eslint",
+                // Add spell check for code
+                "streetsidesoftware.code-spell-checker",
+				// Allow for Copilot 
+				"GitHub.copilot"
+			]
+		}
+	}
+}
