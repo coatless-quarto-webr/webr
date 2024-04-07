@@ -11,7 +11,14 @@
         // "v0.y.z" (release tag)
 		"args": { "VARIANT": "main" }
 	},
-	// "image": "ghcr.io/r-wasm/webr:main", // avoid hard coding
+    // Alternatively, we can skip allowing for variants
+    // by directly pulling the image, e.g.
+	// "image": "ghcr.io/r-wasm/webr:main",
+    // 
+    // Set the starting location to where the webR artifacts are
+    // Note: This unfortunately means we have a copy of the code
+    // at /workspace/webr, but alas... 
+	"workspaceFolder": "/opt/webr",
 	"customizations": {
 		"codespaces": {
 			"openFiles": []
