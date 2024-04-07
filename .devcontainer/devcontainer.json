@@ -32,6 +32,8 @@
 				"dbaeumer.vscode-eslint",
                 // Add spell check for code
                 "streetsidesoftware.code-spell-checker",
+                // Allow for in-browser viewing of HTML files
+                "ritwickdey.LiveServer",
 				// Allow for Copilot 
 				"GitHub.copilot"
 			]
